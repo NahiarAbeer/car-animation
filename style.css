@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.sky{
+    height: 100vh;
+    width: 1000vw;
+    background-image: url('images/background.jpg');
+
+}
+.land{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    bottom: 200px;
+    /* animation: platform linear infinite 11s; */
+
+}
+.track img{
+    position: absolute;
+    z-index: 1;
+    width: 5000vw;
+    height: 250px;
+    animation: platform linear infinite 1s;
+}
+.car{
+    animation: carVibes linear infinite .5s;
+}
+.car img {
+    position: absolute;
+    z-index: 3;
+
+}
+.body {
+    width: 300px;
+    left: 250px;
+    bottom: 20px;
+}
+img.right {
+    width:65px;
+    left:282px;
+    bottom:10px;
+}
+img.left{
+    width:50px;
+    left:441px;
+    bottom:17px;
+}
+.wheel{
+    animation: wheelROller linear infinite 0.3s;
+}
+@keyframes wheelROller {
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes platform
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+@keyframes carVibes {
+    0%{
+        transform: translateY(20px);
+    }
+    30%{
+        transform: translateY(14px);
+    }
+    60%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+    
+}
